@@ -1,1 +1,1 @@
-A Machine learning-powered system to detect wheat crop diseases(Brown rust,Healthy,Loose smut, septoria, Yellow rust)using image classification. Built with Python, Flask, and integrate into a Flutter-based mobile application.
+**A Machine learning-powered system to detect wheat crop diseases(Brown rust,Healthy,Loose smut, septoria, Yellow rust)using image classification. Built with Python, Flask, and integrate into a Flutter-based mobile application.**
