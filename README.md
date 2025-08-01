@@ -1,3 +1,1 @@
-# SmartPhone_WheatDisease_Detection_Project
-A smart mobile application designed to help farmers and agricultural professionals  to detect diseases.  
-A machine learning project developed with Flask as the backend and Flutter as the frontend. 
+A Machine learning-powered system to detect wheat crop diseases(Brown rust,Healthy,Loose smut, septoria, Yellow rust)using image classification. Built with Python, Flask, and integrate into a Flutter-based mobile application.
