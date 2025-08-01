@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wheat Disease Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+    </header>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+        <h2>Upload Image</h2>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <button type="submit">Predict</button>
+        </form>
+    </section>
+
+    <!-- Prediction Output -->
+    <section class="prediction-output">
+        {% if label %}
+            <h2>Prediction Result</h2>
+            <p>{{ label }}</p>
+            {% if image_url %}
+                <img src="{{ image_url }}" alt="Uploaded Image">
+            {% endif %}
+        {% else %}
+            <h2>Prediction output will be shown here</h2>
+        {% endif %}
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About This Website</h2>
+        <p>This web application uses a machine learning model to detect wheat crop diseases from uploaded images. Simply choose an image of a wheat leaf, click "Predict", and view the diagnosis instantly.</p>
+    </section>
+</body>
+</html>
